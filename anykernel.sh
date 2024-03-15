@@ -5,12 +5,10 @@
 # begin properties
 properties() { '
 kernel.string=
-do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-supported.versions=10 - 13
 '; } # end properties
 
 # shell variables
