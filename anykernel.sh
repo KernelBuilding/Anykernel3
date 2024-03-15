@@ -10,19 +10,17 @@ do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=topaz
+device.name1=RMX3063
 device.name2=tapas
 device.name3=xun
-supported.versions=13 - 14.1
+supported.versions=10 - 13
 '; } # end properties
 
 # shell variables
-slot=$(find_slot);
-block=/dev/block/bootdevice/by-name/boot$slot;
-is_slot_device=1;
+block=auto;
+is_slot_device=0;
 ramdisk_compression=auto;
-patch_vbmeta_flag=auto;
-
+no_magisk_check=1;
 
 ## AnyKernel methods (DO NOT CHANGE)
 # import patching functions/variables - see for reference
@@ -48,7 +46,3 @@ fi;
 
 flash_boot;
 ## end install
-
-sleep 3
-ui_print ""
-ui_print "kernel installed successfully"
