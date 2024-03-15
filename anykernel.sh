@@ -10,9 +10,6 @@ do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=RMX3063
-device.name2=tapas
-device.name3=xun
 supported.versions=10 - 13
 '; } # end properties
 
