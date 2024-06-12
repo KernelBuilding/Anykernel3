@@ -29,6 +29,9 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 ## AnyKernel install
 split_boot;
 
+# begin ramdisk changes
+patch_cmdline printk.devkmsg printk.devkmsg=off
+
 ## Selinux Permissive
 #patch_cmdline androidboot.selinux androidboot.selinux=permissive
 
@@ -40,4 +43,5 @@ fi;
 # end ramdisk changes
 
 flash_boot;
+
 ## end install
